@@ -2,6 +2,13 @@
 
 static NSString *const kNoCodesEventName = @"NoCodesEvent";
 
+static NSString *const kScreenShownEventName = @"nocodes_screen_shown";
+static NSString *const kFinishedEventName = @"nocodes_finished";
+static NSString *const kActionStartedEventName = @"nocodes_action_started";
+static NSString *const kActionFailedEventName = @"nocodes_action_failed";
+static NSString *const kActionFinishedEventName = @"nocodes_action_finished";
+static NSString *const kScreenFailedToLoadEventName = @"nocodes_screen_failed_to_load";
+
 @interface RNNoCodes ()
 
 @property (nonatomic, strong) NoCodesSandwich *noCodesSandwich;
@@ -21,7 +28,7 @@ RCT_EXPORT_MODULE()
 }
 
 - (NSArray<NSString *> *)supportedEvents {
-    return @[kNoCodesEventName];
+    return @[kScreenShownEventName, kFinishedEventName, kActionStartedEventName, kActionFailedEventName, kActionFinishedEventName, kScreenFailedToLoadEventName];
 }
 
 RCT_EXPORT_METHOD(initialize:(NSString *)projectKey
