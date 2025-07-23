@@ -28,7 +28,7 @@ RCT_EXPORT_MODULE()
 }
 
 - (NSArray<NSString *> *)supportedEvents {
-    return @[kScreenShownEventName, kFinishedEventName, kActionStartedEventName, kActionFailedEventName, kActionFinishedEventName, kScreenFailedToLoadEventName];
+    return @[kNoCodesEventName, kScreenShownEventName, kFinishedEventName, kActionStartedEventName, kActionFailedEventName, kActionFinishedEventName, kScreenFailedToLoadEventName];
 }
 
 RCT_EXPORT_METHOD(initialize:(NSString *)projectKey
